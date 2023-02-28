@@ -1,11 +1,11 @@
-import {View, Text, ImageBackground} from 'react-native';
 import React from 'react';
+import {ImageBackground, Text, View} from 'react-native';
 import {ICLogo} from '../../assets';
 import images from '../../assets/images';
 import {Button, Gap} from '../../components';
 import Styles from './style';
 
-const GetStarted = () => {
+const GetStarted = ({navigation}: {navigation: any}) => {
   return (
     <ImageBackground source={images.get_started} style={Styles.container}>
       <View>
@@ -15,9 +15,16 @@ const GetStarted = () => {
         </Text>
       </View>
       <View>
-        <Button title="Get Started" />
+        <Button
+          title="Get Started"
+          onPress={() => navigation.navigate('Register')}
+        />
         <Gap height={16} />
-        <Button title="Sign In" type="secondary" />
+        <Button
+          title="Sign In"
+          type="secondary"
+          onPress={() => navigation.replace('Login')}
+        />
       </View>
     </ImageBackground>
   );
