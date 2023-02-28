@@ -1,3 +1,3 @@
-import {IButton} from './button';
+import {IButton, IButtonIcon, IIcon} from './button';
 
-export type {IButton};
+export type {IButton, IButtonIcon, IIcon};
